@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card p-4 shadow-sm">
+    <h3 class="mb-3">Register Student</h3>
+
+    <form method="POST">
+        <div class="mb-3">
+            <label>Student ID</label>
+            <input class="form-control" type="text" name="student_id" required>
+        </div>
+        <div class="mb-3">
+            <label>Name</label>
+            <input class="form-control" type="text" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label>Email</label>
+            <input class="form-control" type="email" name="email" required>
+        </div>
+
+        <button class="btn btn-success w-100">Register</button>
+    </form>
+</div>
+{% endblock %}

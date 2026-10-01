@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card p-4 shadow-sm">
+    <h3 class="mb-3">Enrol {{ student.name }}</h3>
+
+    <form method="POST">
+        <div class="mb-3">
+            <label>Select Module</label>
+            <select class="form-select" name="module_id" required>
+                {% for m in modules %}
+                    <option value="{{ m.id }}">{{ m.code }} - {{ m.title }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <button class="btn btn-success w-100">Enrol</button>
+    </form>
+</div>
+{% endblock %}
